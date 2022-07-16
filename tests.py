@@ -4,7 +4,7 @@ import ite3
 
 class TestPager(unittest.TestCase):
     def test_pager_open(self):
-        pager = sqlite3io.pager.Pager()
+        pager = ite3.pager.Pager()
 
         pager.open("testdata/empty.sqlite", "r")
         pager.close()
@@ -19,11 +19,11 @@ class TestPager(unittest.TestCase):
             pager.open("testdata/zerolength.sqlite", "w")
 
 
-class TestSQLlite3IO(unittest.TestCase):
+class TestIte3(unittest.TestCase):
     def test_pager_open(self):
-        io1 = sqlite3io.open("testdata/empty.sqlite", "r")
+        io1 = ite3.open("testdata/empty.sqlite", "r")
         io1.close()
-        io2 = sqlite3io.open("testdata/empty.sqlite", "w")
+        io2 = ite3.open("testdata/empty.sqlite", "w")
         io2.close()
             
 
